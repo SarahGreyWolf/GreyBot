@@ -1,3 +1,14 @@
+use greybot::thread_pool::ThreadPool;
+use greybot::client::Client;
+
 fn main() {
-    println!("Hello, world!");
+    let pool = ThreadPool::new(5);
+
+    for _ in 0..10 {
+        pool.execute(|| {
+            println!("{}", 10+6*4);
+        });
+    }
+
+    let client = Client::new();
 }
