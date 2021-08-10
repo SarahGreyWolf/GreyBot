@@ -209,6 +209,8 @@ version = "0.1.0"
 dependencies = [
  "reqwest",
  "ron",
+ "serde",
+ "serde_json",
  "tungstenite",
 ]
 
